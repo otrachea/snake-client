@@ -9,6 +9,14 @@ const handleUserInput = (data) => {
   if (['w', 'a', 's', 'd'].includes(data)) {
     connection.write(`Move: ${data}`);
   }
+
+  if (data === '1') {
+    connection.write('Say: Eat this!');
+  }
+
+  if (data === '2') {
+    connection.write('Say: Watch out!');
+  }
 };
 
 const setupInput = function (conn) {
